@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import City from './city';
 
-const CityList = (props) => {
-  const { cities } = props;
-  return (
-    <div className="cities">
-      {cities.map(city => <City city={city} key={city.name} />)}
-    </div>
-  );
-};
+class CityList extends Component {
+  componentWillMount() {
+    // TODO: dispatch an action to load cities!
+  }
+
+  render() {
+    const { cities } = this.props;
+    return (
+      <div className="cities">
+        {cities.map(city => <City city={city} key={city.name} />)}
+      </div>
+    );
+  }
+}
 
 export default CityList;
