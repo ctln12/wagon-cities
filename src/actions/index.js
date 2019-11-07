@@ -18,5 +18,3 @@ export function setActiveCity(city) {
     payload: city
   };
 }
-
-export default { setCities, setActiveCity };
