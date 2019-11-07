@@ -8,8 +8,6 @@ const citiesReducer = (state, action) => {
   switch (action.type) {
     case 'SET_CITIES':
       return action.payload;
-    case 'SELECT_CITY':
-      return action.payload;
     default:
       return state;
   }
