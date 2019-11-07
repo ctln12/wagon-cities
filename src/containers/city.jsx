@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 import { setActiveCity } from '../actions/index';
 
 const City = (props) => {
+  const { city, activeCity } = props;
   const handleClick = () => {
-    props.setActiveCity(props.city);
+    props.setActiveCity(city);
   };
-  const { city } = props;
   let classes = "list-group-item";
-  if (props.city === props.activeCity) {
+  if (city === activeCity) {
     classes += " active-city";
   }
   return (
