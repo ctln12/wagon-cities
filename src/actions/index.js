@@ -10,4 +10,13 @@ export function setCities() {
   };
 }
 
-export default setCities;
+export function setActiveCity(city) {
+  // TODO: API call! For now, simulate a DB
+
+  return {
+    type: 'SELECT_CITY',
+    payload: city
+  };
+}
+
+export default { setCities, setActiveCity };
